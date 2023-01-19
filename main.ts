@@ -1,23 +1,23 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . 9 9 9 9 . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . . f f f f f f . . . . . 
+        . . . . . f 8 8 8 1 f . . . . . 
+        . . . . . f 8 8 8 8 f . . . . . 
+        . . . . . . f 9 9 f . . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . . 8 8 8 8 . . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . . 8 8 8 8 . . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . f 9 9 9 9 f . . . . . 
+        . . . . . f f f f f f . . . . . 
         . . . . . . . . . . . . . . . . 
         `, mySprite, 0, -140)
-    projectile.startEffect(effects.coolRadial)
+    projectile.startEffect(effects.starField)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
     scene.cameraShake(4, 500)
