@@ -1,5 +1,4 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    let mySprite: Sprite = null
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -20,7 +19,14 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         `, mySprite, 0, -140)
     projectile.startEffect(effects.coolRadial)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    scene.cameraShake(4, 500)
+    mySprite.destroy(effects.spray, 500)
+    mySprite.startEffect(effects.fire, 200)
+    info.changeLifeBy(-1)
+})
 let projectile: Sprite = null
+let mySprite: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -143,3 +149,26 @@ scene.setBackgroundImage(img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     `)
+mySprite = sprites.create(img`
+    . . . . 2 2 8 8 8 2 2 . . . . . 
+    . . . . 2 1 1 1 1 1 2 . . . . . 
+    . . . . 8 1 7 1 7 1 8 . . . . . 
+    . . . . . 1 1 1 1 1 . . 2 . . . 
+    . . . . . 1 7 7 7 1 . . 1 1 . . 
+    . . . . . 1 1 1 1 1 . . 1 . 1 . 
+    . . . . . . . 1 . . . . 1 1 . . 
+    . . . . 1 1 1 1 1 1 1 . 1 1 . . 
+    . . . . 1 . 1 1 1 . 1 . 1 . . . 
+    . . . 1 1 . 1 1 1 . 1 1 1 . . . 
+    . . 1 . 1 . 1 1 1 . . . . . . . 
+    . . 1 1 1 . 1 1 1 . . . . . . . 
+    . . . . 1 . 1 . 1 . . . . . . . 
+    . . . . 1 . 1 . 1 . . . . . . . 
+    . . . . . . 1 . 1 . . . . . . . 
+    . . . 1 1 1 1 . 1 1 1 1 . . . . 
+    `, SpriteKind.Player)
+mySprite.setStayInScreen(true)
+mySprite.bottom = 120
+controller.moveSprite(mySprite, 100, 100)
+info.setLife(3)
+effects.starField.startScreenEffect()
