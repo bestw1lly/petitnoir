@@ -119,7 +119,24 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-`</field><data>{"commentRefs":[],"fieldData":{"img":"b_BUc2GLwSmZ`q?dun%U"}}</data></shadow></value></block></statement></block><block type="keyonevent" id="*QM`fNKSn.U-}t%Sh||Q" x="10" y="190"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="variables_set" id="C[6b`}/?cx_A_v^V2OGs"><field name="VAR" id="}lYK4St6qAqI;d}_,%Nw">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="fZWLP{wR+Ed5[egGVv0e"><value name="img"><shadow type="screen_image_picker" id="IMq9^[Eyi.uIySXJ-)V@"><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":"b_BUc2GLwSmZ`q?dun%U"}}</data></shadow></value></block></statement></block><block type="spritescreatenoset" id="?RW3zwYJ4Qv3Fb+npnQ]" disabled="true" x="390" y="110"><value name="img"><shadow type="screen_image_picker" id="LZtnna5@a%[le;D.~@!." disabled="true"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"LZtnna5@a%[le;D.~@!."}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="gUhntv_-_*#(ThX-nd,P" disabled="true"><field name="MEMBER">Player</field></shadow></value></block><block type="keyonevent" id="*QM`fNKSn.U-}t%Sh||Q" x="10" y="190"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="variables_set" id="C[6b`}/?cx_A_v^V2OGs"><field name="VAR" id="}lYK4St6qAqI;d}_,%Nw">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="fZWLP{wR+Ed5[egGVv0e"><value name="img"><shadow type="screen_image_picker" id="IMq9^[Eyi.uIySXJ-)V@"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
