@@ -25,6 +25,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
     mySprite.startEffect(effects.fire, 200)
     info.changeLifeBy(-1)
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+    info.changeScoreBy(1)
+})
 let projectile: Sprite = null
 let mySprite: Sprite = null
 scene.setBackgroundImage(img`
@@ -172,3 +176,38 @@ mySprite.bottom = 120
 controller.moveSprite(mySprite, 100, 100)
 info.setLife(3)
 effects.starField.startScreenEffect()
+let mySprite2 = [sprites.create(img`
+    . . . . . 1 1 1 1 1 . . . . . . 
+    . . . . . 1 f f f 1 . . . . . . 
+    . . . . . . 1 f 1 . . . . . . . 
+    . . . . . . f f f . . . . . . . 
+    . . . . . . . 1 . . . . . . . . 
+    . . . . . f 1 1 1 f . . . . . . 
+    . . . . . f f 1 f f . . . . . . 
+    . . . f f f f 1 f f f f . . . . 
+    . . . f . f f f f f . f . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . . f . f . f . . . . . . 
+    . . . . . f . f . f . . . . . . 
+    . . . . f f . f . f f . . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy), sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . 2 . . . . . . . . 
+    . . . . . . 2 2 2 . . . . . . . 
+    . . . . . 2 2 2 2 2 . . . . . . 
+    . . . . . . f f f . . . . . . . 
+    . . . . . . 1 f 1 . . . . . . . 
+    . . . . . . f f f . . . . . . . 
+    . . . . . . . f . . . . . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . . f . f . f . . . . . . 
+    . . . . . . . f . . . . . . . . 
+    . . . . . . f . f . . . . . . . 
+    . . . . . f f . f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)]
